@@ -1,7 +1,7 @@
 const express = require('express');
 const ruta = express.Router();
 
-ruta.post("/acces/:email/:password/:name",function (req,res) {
+ruta.get("  ",function (req,res) {
     let email = req.params.email;
     let password = req.params.password;
     let name = req.params.name;
