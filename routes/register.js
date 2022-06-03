@@ -1,10 +1,10 @@
 const express = require('express');
 const ruta = express.Router();
 
-ruta.post("/acces",function (req,res) {
-    let email = req.body.email;
-    let password = req.body.password;
-    let name = req.body.name;
+ruta.post("/acces/:email/:password/:name",function (req,res) {
+    let email = req.params.email;
+    let password = req.params.password;
+    let name = req.params.name;
 
     if(email.includes("@") && password.includes("AP") && name.length > 0){
         res.send(true);
